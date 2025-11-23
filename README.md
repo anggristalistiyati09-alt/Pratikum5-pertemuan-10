@@ -1,6 +1,6 @@
 # Pratikum5-pertemuan-10
 
-  data_mahasiswa = {}
+    data_mahasiswa = {}
 
   def hitung_nilai_akhir(tugas, uts, uas):
       return (tugas * 0.3) + (uts * 0.35) + (uas * 0.35)
