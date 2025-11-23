@@ -2,40 +2,40 @@
 
     data_mahasiswa = {}
 
-  def hitung_nilai_akhir(tugas, uts, uas):
-      return (tugas * 0.3) + (uts * 0.35) + (uas * 0.35)
+      def hitung_nilai_akhir(tugas, uts, uas):
+          return (tugas * 0.3) + (uts * 0.35) + (uas * 0.35)
 
-  def tambah_data():
-      nim = input("Masukkan NIM: ")
-      if nim in data_mahasiswa:
-          print("NIM sudah ada.")
-          return
-      nama = input("Masukkan Nama: ")
-      tugas = float(input("Masukkan Nilai Tugas (0-100): "))
-      uts = float(input("Masukkan Nilai UTS (0-100): "))
-      uas = float(input("Masukkan Nilai UAS (0-100): "))
-      nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
-      data_mahasiswa[nim] = {
-          'nama': nama,
-          'tugas': tugas,
-          'uts': uts,
-          'uas': uas,
-          'nilai_akhir': nilai_akhir
-      }
-      print("Data berhasil ditambahkan.")
+      def tambah_data():
+          nim = input("Masukkan NIM: ")
+          if nim in data_mahasiswa:
+              print("NIM sudah ada.")
+              return
+          nama = input("Masukkan Nama: ")
+          tugas = float(input("Masukkan Nilai Tugas (0-100): "))
+          uts = float(input("Masukkan Nilai UTS (0-100): "))
+          uas = float(input("Masukkan Nilai UAS (0-100): "))
+          nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
+          data_mahasiswa[nim] = {
+              'nama': nama,
+              'tugas': tugas,
+              'uts': uts,
+              'uas': uas,
+              'nilai_akhir': nilai_akhir
+          }
+          print("Data berhasil ditambahkan.")
 
-  def ubah_data():
-      nim = input("Masukkan NIM yang akan diubah: ")
-      if nim not in data_mahasiswa:
-          print("NIM tidak ditemukan.")
-          return
-      print(f"Data saat ini untuk {data_mahasiswa[nim]['nama']}:")
-      tugas = float(input("Masukkan Nilai Tugas baru (0-100): "))
-      uts = float(input("Masukkan Nilai UTS baru (0-100): "))
-      uas = float(input("Masukkan Nilai UAS baru (0-100): "))
-      nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
-      data_mahasiswa[nim]['tugas'] = tugas
-      data_mahasiswa[nim]['uts'] = uts
+      def ubah_data():
+          nim = input("Masukkan NIM yang akan diubah: ")
+          if nim not in data_mahasiswa:
+              print("NIM tidak ditemukan.")
+              return
+          print(f"Data saat ini untuk {data_mahasiswa[nim]['nama']}:")
+          tugas = float(input("Masukkan Nilai Tugas baru (0-100): "))
+          uts = float(input("Masukkan Nilai UTS baru (0-100): "))
+          uas = float(input("Masukkan Nilai UAS baru (0-100): "))
+          nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
+          data_mahasiswa[nim]['tugas'] = tugas
+          data_mahasiswa[nim]['uts'] = uts
       data_mahasiswa[nim]['uas'] = uas
       data_mahasiswa[nim]['nilai_akhir'] = nilai_akhir
       print("Data berhasil diubah.")
