@@ -1,4 +1,5 @@
 # Pratikum5-pertemuan-10
+
   data_mahasiswa = {}
 
   def hitung_nilai_akhir(tugas, uts, uas):
